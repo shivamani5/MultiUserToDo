@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit Task</title>
+</head>
+<body>
+    {% block content %}
+        <h1>Edit Task: {{ task.title }}</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-warning" type="submit">Update Task</button>
+        </form>
+        <br>
+        <a class="btn btn-danger" href="{% url 'tasks' %}">Cancel</a>
+    {% endblock %}
+</body>
+</html> 
+
+
