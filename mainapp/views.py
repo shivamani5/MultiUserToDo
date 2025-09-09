@@ -19,10 +19,10 @@ def sign_up(request):
             emailuser=form.cleaned_data.get('email')
             if User.objects.filter(email__exact=emailuser).exists():
                 messages.error(request,"Email taken, try another email.")
-                return redirect('/sign_up/')
+                return redirect('sign_up')
             form.save()
             messages.success(request,'Registration Successfull!')
-            return redirect('/login/')
+            return redirect('login')
     else:
         form=SignUpForm()
     context={
