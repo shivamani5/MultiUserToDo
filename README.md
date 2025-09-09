@@ -1,0 +1,1 @@
+MultiUserToDo App is a multi-user task management application that allows users to register, log in, and manage their personal to-do lists. Users can create, view, edit, and delete tasks, which are tracked with a title, description, and status, and can be assigned a priority and due date. The app also features a simple login and signup system with message notifications.
